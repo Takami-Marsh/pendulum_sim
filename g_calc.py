@@ -6,9 +6,11 @@ import matplotlib.pyplot as plt
 # Length (m), Period (s) for pendulum with 15° initial angle
 data = [
     (1.80, 2.698),  # 180 cm
-    (1.95, 2.807),  # 195 cm
+    (1.90, 2.768),  # 190 cm
+    (2.00, 2.839),  # 200 cm
     (2.10, 2.911),  # 210 cm
-    (2.25, 3.012),  # 225 cm
+    (2.20, 2.978),  # 220 cm
+    (2.30, 3.044),  # 230 cm
     (2.40, 3.109)   # 240 cm
 ]
 
@@ -16,10 +18,10 @@ def calculate_g_approximate(L, T):
     """Calculate g using the small-angle approximation formula."""
     return 4 * np.pi**2 * L / (T**2)
 
-def pendulum_ode(t, y, L):
+def pendulum_ode(t, y, L, g_test):
     """Define the pendulum differential equation."""
     theta, omega = y
-    dydt = [omega, -9.81/L * np.sin(theta)]
+    dydt = [omega, -g_test/L * np.sin(theta)]
     return dydt
 
 def find_period_numerical(L, theta0):

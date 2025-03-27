@@ -34,7 +34,7 @@ pip install numpy scipy matplotlib
 
 The script includes example data for a pendulum with:
 - Initial angle: 15°
-- Lengths: 180cm to 240cm (in 15cm increments)
+- Lengths: 180cm to 240cm (in 10cm increments)
 - Corresponding measured periods
 
 ## Usage
@@ -52,16 +52,18 @@ Calculating gravitational acceleration (g) from pendulum data:
 Length (m) | Period (s) | g (approx) | g (numerical) | Difference (%)
 ----------------------------------------------------------------------
      1.80 |     2.698 |     9.762 |       9.861 |       0.999
-     1.95 |     2.807 |     9.770 |       9.791 |       0.207
+     1.90 |     2.768 |     9.790 |       9.817 |       0.273
+     2.00 |     2.839 |     9.796 |       9.947 |       1.517
      2.10 |     2.911 |     9.784 |       9.877 |       0.951
-     2.25 |     3.012 |     9.791 |       9.847 |       0.568
+     2.20 |     2.978 |     9.793 |       9.889 |       0.967
+     2.30 |     3.044 |     9.799 |       9.804 |       0.046
      2.40 |     3.109 |     9.802 |       9.882 |       0.805
 ----------------------------------------------------------------------
 
 Average Results:
-Average g (approximate method): 9.782 m/s²
-Average g (numerical method):   9.852 m/s²
-Average difference: 0.706%
+Average g (approximate method): 9.790 m/s²
+Average g (numerical method):   9.868 m/s²
+Average difference: 0.794%
 ```
 
 ## Analysis
