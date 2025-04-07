@@ -5,13 +5,13 @@ import matplotlib.pyplot as plt
 # Experimental data (example values)
 # Length (m), Period (s) for pendulum with 15° initial angle
 data = [
-    (1.80, 2.698),  # 180 cm
-    (1.90, 2.768),  # 190 cm
-    (2.00, 2.839),  # 200 cm
-    (2.10, 2.911),  # 210 cm
-    (2.20, 2.978),  # 220 cm
-    (2.30, 3.044),  # 230 cm
-    (2.40, 3.109)   # 240 cm
+    (1.80, 2.703333),  # 180 cm
+    (1.90, 2.779333),  # 190 cm
+    (2.00, 2.840667),  # 200 cm
+    (2.10, 2.920000),  # 210 cm
+    (2.20, 3.000000),  # 220 cm
+    (2.30, 3.061333),  # 230 cm
+    (2.40, 3.112667)   # 240 cm
 ]
 
 def calculate_g_approximate(L, T):
@@ -119,7 +119,7 @@ def calculate_g_numerical(L, T_exp, theta0):
     return (g_min + g_max) / 2
 
 # Calculate g using both methods for each data point
-initial_angle = 15  # degrees
+initial_angle = 10  # degrees
 results = []
 
 print("\nCalculating gravitational acceleration (g) from pendulum data:")
@@ -138,7 +138,7 @@ for L, T in data:
     results.append((L, T, g_approx, g_num, diff_percent))
     
     # Print results
-    print(f"{L:9.2f} | {T:9.3f} | {g_approx:9.3f} | {g_num:11.3f} | {diff_percent:11.3f}")
+    print(f"{L:9.2f} | {T:9.3f} | {g_approx:9.4f} | {g_num:11.4f} | {diff_percent:11.4f}")
 
 print("-" * 70)
 
@@ -148,6 +148,6 @@ avg_g_num = np.mean([r[3] for r in results])
 avg_diff = np.mean([r[4] for r in results])
 
 print(f"\nAverage Results:")
-print(f"Average g (approximate method): {avg_g_approx:.3f} m/s²")
-print(f"Average g (numerical method):   {avg_g_num:.3f} m/s²")
-print(f"Average difference: {avg_diff:.3f}%")
+print(f"Average g (approximate method): {avg_g_approx:.4f} m/s²")
+print(f"Average g (numerical method):   {avg_g_num:.4f} m/s²")
+print(f"Average difference: {avg_diff:.4f}%")
