@@ -1,6 +1,7 @@
 # Pendulum Gravitational Acceleration Calculator
 
 This Python script calculates the gravitational acceleration (g) using pendulum motion data through two different methods:
+
 1. Small-angle approximation formula
 2. Full non-linear differential equation (numerical solution)
 
@@ -12,6 +13,7 @@ This Python script calculates the gravitational acceleration (g) using pendulum 
 - Matplotlib
 
 Install dependencies using:
+
 ```bash
 pip install numpy scipy matplotlib
 ```
@@ -21,6 +23,7 @@ pip install numpy scipy matplotlib
 ### Methods Used
 
 1. **Small-angle Approximation**
+
    - Uses the formula: T = 2π√(L/g)
    - Solved for g: g = 4π²L/T²
    - Valid for small angles (typically < 20°)
@@ -33,6 +36,7 @@ pip install numpy scipy matplotlib
 ### Sample Data
 
 The script includes example data for a pendulum with:
+
 - Initial angle: 15°
 - Lengths: 180cm to 240cm (in 10cm increments)
 - Corresponding measured periods
@@ -42,6 +46,7 @@ The script includes example data for a pendulum with:
 ### Gravitational Acceleration Calculation
 
 Run the `g_calc.py` script to calculate gravitational acceleration (g) using pendulum data:
+
 ```bash
 python g_calc.py
 ```
@@ -49,6 +54,7 @@ python g_calc.py
 ### Pendulum Period Prediction
 
 Run the `t_calc.py` script to predict pendulum periods for a range of lengths:
+
 ```bash
 python t_calc.py
 ```
