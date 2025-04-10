@@ -4,7 +4,7 @@ from tabulate import tabulate
 
 # Constants
 g = 9.7965  # gravitational acceleration in Hiroshima (m/s²)
-initial_angle = 15  # degrees
+initial_angle = 10  # degrees
 
 # Create array of lengths from 1.8m to 2.4m in 0.1m increments
 lengths = np.arange(1.8, 2.41, 0.1)

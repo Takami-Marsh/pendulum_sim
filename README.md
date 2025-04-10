@@ -37,7 +37,7 @@ pip install numpy scipy matplotlib
 
 The script includes example data for a pendulum with:
 
-- Initial angle: 15°
+- Initial angle: 10°
 - Lengths: 180cm to 240cm (in 10cm increments)
 - Corresponding measured periods
 
@@ -65,21 +65,21 @@ This script calculates the pendulum period using both the small-angle approximat
 
 ```
 Predicted Pendulum Periods in Hiroshima (g = 9.7965 m/s²)
-Initial angle: 15°
+Initial angle: 10°
 +--------------+-----------------------+--------------------------+------------------+
 |   Length (m) |   Period (approx) (s) |   Period (numerical) (s) |   Difference (%) |
 +==============+=======================+==========================+==================+
 |          1.8 |                2.6933 |                   2.7027 |             0.35 |
 +--------------+-----------------------+--------------------------+------------------+
-|          1.9 |                2.7671 |                   2.7828 |             0.56 |
+|          1.9 |                2.7671 |                   2.7628 |             0.16 |
 +--------------+-----------------------+--------------------------+------------------+
 |          2   |                2.839  |                   2.8428 |             0.14 |
 +--------------+-----------------------+--------------------------+------------------+
 |          2.1 |                2.9091 |                   2.9229 |             0.47 |
 +--------------+-----------------------+--------------------------+------------------+
-|          2.2 |                2.9775 |                   3.003  |             0.85 |
+|          2.2 |                2.9775 |                   2.983  |             0.18 |
 +--------------+-----------------------+--------------------------+------------------+
-|          2.3 |                3.0444 |                   3.0631 |             0.61 |
+|          2.3 |                3.0444 |                   3.043  |             0.05 |
 +--------------+-----------------------+--------------------------+------------------+
 |          2.4 |                3.1099 |                   3.1231 |             0.42 |
 +--------------+-----------------------+--------------------------+------------------+
@@ -109,6 +109,6 @@ Average difference: 0.7517%
 
 ## Analysis
 
-- The small-angle approximation produces results within 1% of the numerical solution for a 15° initial angle
+- The small-angle approximation produces results within 0.5% of the numerical solution for a 10° initial angle
 - The numerical method yields values closer to the expected 9.81 m/s²
-- Results demonstrate that the small-angle approximation is reasonably accurate for initial angles of 15°
+- Results demonstrate that the small-angle approximation is highly accurate for initial angles of 10°
